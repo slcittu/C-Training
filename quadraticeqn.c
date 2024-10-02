@@ -5,7 +5,7 @@ int main()
 {
     int a, b, c;
 
-    double root1, root2, d, real, imaginary;
+    double root1, root2, d, real=0, imaginary;
 
     printf("Enter Coefficients of a: ");
     scanf("%d",&a);
@@ -39,5 +39,12 @@ int main()
 
         printf("The Equation has one Real root: %.2lf",root1);
     }
+    else
+    {
+        real=-b/(2.0*a);
+        imaginary=sqrt(-d)/(2*a);
 
+        printf("The Equation has Complex roots: %.2lf + %.2lfi and %.2lf - %.2lfi",real,imaginary,real,imaginary);
+    }
+    return 0;
 }
