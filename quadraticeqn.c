@@ -33,4 +33,11 @@ int main()
 
         printf("The Equation has Real and Distinct Roots: Root 1 = %.2lf and Root 2 = %.2lf",root1, root2);
     }
+    else if(d==0)
+    {
+        root1=-b/(2*a);
+
+        printf("The Equation has one Real root: %.2lf",root1);
+    }
+
 }
