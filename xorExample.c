@@ -20,7 +20,7 @@ int main()
     if ((c1 == 'A' || c1 == 'E' || c1 == 'I' || c1 == 'O' || c1 == 'U' || c1 == 'a' || c1 == 'e' || c1 == 'i' || c1 == 'o' || c1 == 'u') 
          &&(c2 == 'A' || c2 == 'E' || c2 == 'I' || c2 == 'O' || c2 == 'U' || c2 == 'a' || c2 == 'e' || c2 == 'i' || c2 == 'o' || c2 == 'u'))
     {
-             if ((c1 ^ c2) == 0 || (c1 ^ c2) == 32)
+             if (c1 ^^ c2)
         {
             printf("Invalid Input!! Both caracters are the same.\n");
         }
