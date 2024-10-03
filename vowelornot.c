@@ -8,7 +8,7 @@ Program header
 
 #include<stdio.h>
 
-void main()
+int main()
 {
     char ch;
     printf("Enter a character:");
@@ -25,4 +25,12 @@ void main()
 
         }
   } 
+
+  else
+  {
+        printf("Enter a Valid input!!")
+        return 1;
+  }
+
+  return 0;
 }
