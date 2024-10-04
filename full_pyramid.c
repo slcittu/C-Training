@@ -21,7 +21,7 @@ void main()
         for(lc2=1;lc2<=lc;lc2++)
         {
             printf("%d ",lc);
-            //printf(" ");
+            
         }
         printf("\n");
     }
