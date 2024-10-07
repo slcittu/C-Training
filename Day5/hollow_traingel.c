@@ -13,11 +13,11 @@ int main()
     int rowNum,row=1,col,space;
 
     printf("Enter the no of rows for the triangle:");
-    scanf("%d",&rowNum);
+    scanf("%d",&rowNum); //rowNum=5
 
     while(row<=rowNum)
     {
-        space=rowNum-row;
+        space=rowNum-row;// space=4
         while (space>0)
         {
             printf(" ");
