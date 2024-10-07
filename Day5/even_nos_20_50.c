@@ -12,11 +12,11 @@ void main()
 {
     int no=20;
      printf("The numbers are: ");
-    while(no<=50)
+    while(no<50)
     {
         if(no%2==0)
         {
-            printf(" %d\t",no);
+            printf("%d\t",no);
         }
         no++;
     }
