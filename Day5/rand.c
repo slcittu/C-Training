@@ -11,19 +11,33 @@ Program header
 void main()
 {
     int rand_num=rand()%25;
-    int guess,
+    int guess,attempt=0;
+    printf("Randum: %d",rand_num);
     if(rand_num<25)
     {
         while (1)
         {
-            printf("Guess the number les than 25:");
-            scanf("%d",&guess);
-            if(guess==rand_num)
-            {
-                printf("Predicted Right!!");
-                break;
+             attempt=0;
+            while(attempt<5)
+            {   
+               
+                printf("Attempt %d\n",attempt+1);
+                attempt++;
+                printf("Guess the number les than 25:");
+                scanf("%d",&guess);
+                if(guess==rand_num)
+                {
+                    printf("Predicted Right!!");
+                    break;
+                }
+                printf("Wrong Guess!! Guess again..\n");
             }
-            printf("Wrong Guess!! Guess again..\n");
+             if(guess==rand_num)
+                {
+                    break;
+                }
+            printf("You Failed!! RETRY NOW..");
+           
         }
         
     }
