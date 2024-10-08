@@ -9,25 +9,25 @@ Program header
 int main()
 {
     char arr[10],temp;
-    int i,j;
-    for ( i = 0; i < 10; i++)
+    int first,last;
+    for ( first = 0; first < 10; first++)
     {
-        printf("Enter %d character to the array: ",i+1);
-        scanf(" %c",&arr[i]);
+        printf("Enter %d character to the array: ",first+1);
+        scanf(" %c",&arr[first]);
     }
 
-    for ( i = 0,j=9; i < j; i++,j--)
+    for ( first = 0,last=9; first < last; first++,last--)
     {   
-        temp=arr[i];
-        arr[i]=arr[j];
-        arr[j]=temp;
+        temp=arr[first];
+        arr[first]=arr[last];
+        arr[last]=temp;
     }
     printf("\nReversed array is: ");
-    for ( i = 0; i < 10; i++)
+    for ( first = 0; first < 10; first++)
     {
-        printf("%c",arr[i]);
+        printf("%c",arr[first]);
     }
     
-    printf("Size of array is %d",sizeof(arr));
+    printf("\nSize of array is %d",sizeof(arr));
     return 0;
 }
