@@ -28,6 +28,6 @@ int main()
         printf("%c",arr[i]);
     }
     
-    
+    printf("Size of array is %d",sizeof(arr));
     return 0;
 }
