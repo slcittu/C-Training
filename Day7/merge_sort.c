@@ -65,6 +65,9 @@ int main()
         arr[sorted_index++]=rightHalf[right_index++];
     }
     
+    printf("\nLeft Half: %d %d ",leftHalf[0],leftHalf[1]);
+    printf("Right Half: %d %d ",rightHalf[0],rightHalf[1]);
+
      printf("\n Sorted Arrays is :");
 
     for(index=0;index<4;index++)
