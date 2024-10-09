@@ -1,12 +1,12 @@
 /*
 Program header 
 1.Objective :Bubble Sort (Ascending Order)
-             Array = {2,6,3,4,8,3,9,10};
-             2 Loops
-             Outer loop is for number of sorts = n-1 where n- no.of elements =Out_count
-             Inner loop for number of comparisons =Out_count-1
+             -Array = {2,6,3,4,8,3,9,10};
+             -2 Loops
+             -Outer loop is for number of sorts = n-1 where n- no.of elements =Out_count
+             -Inner loop for number of comparisons =Out_count-1
 2.Revisions: Nil
-3.Date & time of revision :07/10/24
+3.Date & time of revision :09/10/24
 4.Author Name: Cittu S L
 */
 #include <stdio.h>
