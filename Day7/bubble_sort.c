@@ -13,7 +13,7 @@ Program header
 
 int main()
 {
-    int size,index,sort_count,comparison;
+    int size,index,sort_count,comparison,temp;
 
     printf("Enter the size of array: ");
     scanf("%d",&size);
@@ -34,7 +34,7 @@ int main()
         {
             if(arr[comparison]>arr[comparison+1])
             {
-                int temp=arr[comparison];
+                temp=arr[comparison];
                 arr[comparison]=arr[comparison+1];
                 arr[comparison+1]=temp;
             }
