@@ -13,25 +13,25 @@ int mat1[5] = {1,2,3,4,5};
 int mat2[5] = {5,4,3,2,1};
 void main()
 {
-    int lc;
-    for(lc=0;lc<5;lc++)
+    int index;
+    for(index=0;index<5;index++)
     {
         arr_add(mat1,mat2);
     }
 }
 void arr_add(int mat1[],int mat2[])
 {
-    int lc;
+    int index;
     static int count=1;
     int res[5];
-    for(lc=0;lc<5;lc++)
+    for(index=0;index<5;index++)
     {
-        res[lc] = mat1[lc]+mat2[lc];
+        res[index] = mat1[index]+mat2[index];
     }
-    printf("Resultant array = ");
-    for(lc=0;lc<5;lc++)
+    printf("Array after addition = ");
+    for(index=0;index<5;index++)
     {
-        printf("%d\t",res[lc]);
+        printf("%d\t",res[index]);
     }
     
     printf("\nValue of count = %d\n",count);

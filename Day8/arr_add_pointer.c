@@ -18,16 +18,16 @@ void main()
 }
 void arr_add(int *mat1,int *mat2)
 {
-    int lc;
+    int index;
     int res[5];
-    for(lc=0;lc<5;lc++)
+    for(index=0;index<5;index++)
     {
-        res[lc] = mat1[lc]+mat2[lc];
+        res[index] = mat1[index]+mat2[index];
     }
-    printf("Resultant array = ");
-    for(lc=0;lc<5;lc++)
+    printf("Array After addition is: ");
+    for(index=0;index<5;index++)
     {
-        printf("%d\t",res[lc]);
+        printf("%d\t",res[index]);
     }
 
 }
