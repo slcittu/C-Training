@@ -12,13 +12,16 @@ int main()
 {
     int var;
 
-    printf("Enter the number to shif:");
+    printf("Enter the number to shift:");
     scanf("%d",&var);
     int *int_ptr=&var;
     int **ptp = &int_ptr;
 
-    printf("Original value: %d",**ptp);
+    printf("Original value: %d\n",**ptp);
 
     **ptp=**ptp<<1;
+
+    printf("Shifted Value: %d\n",**ptp);
+    
     return 0;
 }
