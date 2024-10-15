@@ -24,7 +24,6 @@ void main()
 
     factorial=fact(n);
     printf("\nFactorial of %d is %d. ",n,factorial);
-
     
 }
 
