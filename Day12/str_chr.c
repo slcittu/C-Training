@@ -12,9 +12,15 @@ Program header
 void main()
 {
     char str[]="Quest";
-    char ch='Q';
+    char ch='w';
     char *ch_ptr;
     ch_ptr=strchr(str,ch);
-
+    if(ch_ptr!=NULL)
+    {
     printf(" %c  \n",*ch_ptr);
+    }
+    else
+    {
+        printf("Character '%'c not part of string.",ch);
+    }
 }
