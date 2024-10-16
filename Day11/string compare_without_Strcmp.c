@@ -10,10 +10,36 @@ Program header
 
 void main()
 {
-    
-    char str1[]="String3";
-    char str2[]="String1";
+    char str1[]="abC";
+    char str2[]="abc";
 
-    int var;
-    
+    int var=0,index;
+    while(str1[index]!='\0' && str2[index]!='\0')
+    {
+        if(str1[index]!=str2[index])
+        {
+            if(str1[index]>str2[index])
+            {
+                var=1;
+            }
+            else
+            {
+                var=-1;
+            }
+            break;
+        }
+        index++;
+    }
+    if(var==0 &&(str1[index]!='\0'||str2[index]!='\0'))
+    {
+        if(str1[index]!='\0')
+        {
+            var=1;
+        }
+        else{
+            var=-1;
+        }
+    }
+    printf("%d",var);
+
 }
