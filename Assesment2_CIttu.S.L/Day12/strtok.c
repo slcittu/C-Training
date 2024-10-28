@@ -19,7 +19,7 @@ void main()
 
     while(token!=NULL)
     {
-        printf("Tokenised string is: %s \n",token);
+        printf("Tokenised shtring is: %s \n",token);
         token=strtok(NULL,delimiter);
     }
 }
