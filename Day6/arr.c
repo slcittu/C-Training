@@ -16,5 +16,4 @@ void main()
     printf("%x \n", &arr[0]);
     printf("%x \n", &arr[1]);
     printf("%x \n", &arr[2]);
-
 }

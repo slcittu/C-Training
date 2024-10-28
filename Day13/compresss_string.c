@@ -1,3 +1,4 @@
+//code to compress  A STRING
 #include <stdio.h>
 #include <string.h>
 void compressString(char* input, char* output) 
@@ -11,14 +12,14 @@ void compressString(char* input, char* output)
         output[index2++]=input[index1];
         count=1;
 
-        while (index1 + 1 < len && input[index1] == input[index1 + 1]) 
+        while (index1+1<len&&input[index1]==input[index1+1]) 
         {
             count++;
             index1++;
         }
         if (count > 1) 
         {
-            sprintf(temp,"%d", count);
+            sprintf(temp,"%d",count);
             for (int index3=0;temp[index3]!='\0';index3++) 
             {
                 output[index2++]=temp[index3];

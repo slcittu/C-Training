@@ -29,4 +29,5 @@ void main()
     st1.my_st1.v1=10;
     st1.my_st1.my_str1.str2_v1=20;
     printf("%d \n",st1.my_st1.v1);
+     printf("%d \n",st1.my_st1.my_str1.str2_v1);
 }
