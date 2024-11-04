@@ -53,7 +53,7 @@ void main()
                     break;
             case 2:if(is_empty(size))
                     {
-                        printf("Stack Uderflow! Canot POP.\n");
+                        printf("Stack Underflow! Canot POP.\n");
                         break;
                     }
                     stack=pop(stack,&size);
@@ -80,6 +80,7 @@ Node *push(Node *top,int *size,int data)
     Node *newNode=(Node*)calloc(1,sizeof(Node));
     newNode->data=data;
     newNode->next=top;
+    newNode->prev=NULL;
 
     if(top!=NULL)
     {
