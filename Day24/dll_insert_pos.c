@@ -1,10 +1,3 @@
-/*
-Program header 
-1.Objective: Write code to implemenet Doubly Linked List, new node at given position
-2.Revisions: Nil
-3.Date & time of revision :29/10/24
-4.Author Name: Cittu S L
-*/
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -74,21 +67,7 @@ void first_node()
     temp=new_node;
     totalNodes++;
 }
-//function to create nodes at beginning
-void createNodeBeginning()
-{
-    Node *new_node;
-    new_node=(Node*)malloc(sizeof(Node));
-    temp=head;
-    printf("Enter an integer: ");
-    scanf("%d",&new_node->data);
-    new_node->prev=NULL;
-    new_node->next=head;
-    head->prev=new_node;
-    head=new_node;
-    totalNodes++;
-    
-}
+
 //function to create node at the end
 void createNode()
 {
@@ -104,6 +83,21 @@ void createNode()
     totalNodes++;
 }
 
+//function to create nodes at beginning
+void createNodeBeginning()
+{
+    Node *new_node;
+    new_node=(Node*)malloc(sizeof(Node));
+    temp=head;
+    printf("Enter an integer: ");
+    scanf("%d",&new_node->data);
+    new_node->prev=NULL;
+    new_node->next=head;
+    head->prev=new_node;
+    head=new_node;
+    totalNodes++;
+    
+}
 //adding new node at a given position of list
 void createNodeAtPosition()
 {

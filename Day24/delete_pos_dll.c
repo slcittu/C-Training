@@ -1,15 +1,3 @@
-/*
-Program header 
-1.Objective: Write code to implemenet Doubly Linked List, 
-            - delete a node at given position
-            DLL:N1 -> N2 -> N3 -> N4 -> N5
-            ex: Node to be deleted is N3(position 3)
-            N2->Next = N3->Next
-            N4->Next = N3->Next
-2.Revisions: Nil
-3.Date & time of revision :29/10/24
-4.Author Name: Cittu S L
-*/
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -95,6 +83,29 @@ void first_node()
     temp=new_node;
     totalNodes++;
 }
+
+
+//function to create node at the end 
+void createNode()
+{
+    Node *new_node;
+    new_node=(Node*)malloc(sizeof(Node));
+
+    printf("Enter an integer: ");
+    scanf("%d",&new_node->data);
+    temp=head;
+    while(temp->next!=NULL)
+    {
+        temp=temp->next;
+    }
+    new_node->prev=temp;
+    new_node->next=NULL;
+    temp->next=new_node;
+    temp=new_node;
+    totalNodes++;
+}
+
+
 //function to create nodes at beginning
 void createNodeBeginning()
 {
@@ -119,26 +130,6 @@ void createNodeBeginning()
     totalNodes++;
     
 }
-//function to create node at the end 
-void createNode()
-{
-    Node *new_node;
-    new_node=(Node*)malloc(sizeof(Node));
-
-    printf("Enter an integer: ");
-    scanf("%d",&new_node->data);
-    temp=head;
-    while(temp->next!=NULL)
-    {
-        temp=temp->next;
-    }
-    new_node->prev=temp;
-    new_node->next=NULL;
-    temp->next=new_node;
-    temp=new_node;
-    totalNodes++;
-}
-
 //adding new node at a given position of list
 void createNodeAtPosition()
 {

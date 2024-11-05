@@ -1,24 +1,17 @@
-/*
-Program header 
-1.Objective: Write code to implemenet Singly Linked List, new node at end of list
-2.Revisions: Nil
-3.Date & time of revision :24/10/24
-4.Author Name: Cittu S L
-*/
 
 #include<stdio.h>
 #include<stdlib.h>
 
 struct Node
 {
-    int v1;//data section of node
-    struct Node *next;//pointer section or link section of node => Self referential pointers
+    int v1;
+    struct Node *next;
 };
 
 //prototyping
 void first_node();
-void new_node();
-
+void insert_begin();
+void print();
 
 //Global declarations
 struct Node *head,*temp;
@@ -30,8 +23,9 @@ void main()
     first_node();
     for(index=1;index<no_of_nodes;index++)
     {
-        new_node();
+        insert_begin();
     }
+    print();
 
 }
 //first node creation
@@ -52,9 +46,8 @@ void first_node()
         local->next=NULL;
     }
 }
-
-//new node creation in list
-void new_node()
+//adding new node to the beginning of list
+void insert_begin()
 {
     struct Node *local;
     local=(struct Node*)malloc(sizeof(struct Node));
@@ -64,16 +57,21 @@ void new_node()
     }
     else
     {
-        temp=head;//temp is pointing to first node
-        while(temp->next!=NULL)
-        {
-            temp=temp->next;//move temp pointer to next node
-        }
-        temp->next=local;//previous node-> next is pointing to new node
+        temp=head;
         printf("Enter an integer value:");
         scanf("%d",&local->v1);
-        temp=local;
-        temp->next=NULL;//new node next pointer is NULL
+        local->next=temp;
+        head=local;
     }
+}
 
+//function to print added nodes
+void print()
+{
+    temp=head;//temp is pointing to first node
+    while(temp->next!=NULL)
+    {
+        printf("%d ",temp->v1);
+        temp=temp->next;//move temp pointer to next node
+    }
 }

@@ -1,15 +1,3 @@
-/*
-Program header 
-1.Objective: Write code to implemenet Doubly Linked List, 
-            - delete a node at given position
-            DLL:N1 -> N2 -> N3 -> N4 -> N5
-            ex: Node to be deleted is N3(position 3)
-            N2->Next = N3->Next
-            N4->Next = N3->Next
-2.Revisions: Nil
-3.Date & time of revision :29/10/24
-4.Author Name: Cittu S L
-*/
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -31,6 +19,7 @@ void createNodeBeginning();
 void createNode();
 void createNodeAtPosition();
 void deleteNodeAtPosition();
+void findGreaterNodes();
 void print();
 
 void main()
@@ -39,7 +28,7 @@ void main()
     first_node();
          while(choice==1)
         {
-            printf("What operation you want to do?\n1.Insert at beginning\n2.Insert at end\n3.Insert at a given position\n4.Delete a node at a postion: ");
+            printf("Where operation you want to do?\n1.Insert at beginning\n2.Insert at end\n3.Insert at a given position\n4.Delete a node at a postion\n5. Find nodes that are greater than a given value: ");
             scanf("%d",&add);
 
             if(add==1)
@@ -62,6 +51,10 @@ void main()
                 deleteNodeAtPosition();
                 print();
             }
+            else if(add==5)
+            {
+                findGreaterNodes();
+            }
             printf("Do you want to continue?: (yes-1/no-0):");
             scanf("%d",&choice);
         }
@@ -70,6 +63,43 @@ void main()
     
 }
 
+//function to find all nodes greater than the key
+void findGreaterNodes()
+{
+    int key,count=1,pos=0,index;
+
+    printf("Enter the search key: ");
+    scanf("%d",&key);
+
+    int positions[totalNodes];
+
+    temp=head;
+    while(temp!=NULL)
+    {
+        if(temp->data>key)
+        {
+            positions[pos++]=count;
+        }
+        temp=temp->next;
+        count++;
+    }
+
+    if(pos==0)
+    {
+        printf("No nodes greater than %d...\n",key);
+    }
+    else
+    {
+        printf("Psoitions of nodes with data greater than %d:",key);
+        for(index=0;index<pos;index++)
+        {
+            printf("%d ",positions[index]);
+        }
+        printf("\n");
+    }
+}
+
+//function to print the nodes
 void print()
 {
     temp=head;
@@ -189,6 +219,8 @@ void createNodeAtPosition()
     }
 }
 
+
+//function to delete a node from a particular position
 void deleteNodeAtPosition()
 {
     int pos,count=1;
