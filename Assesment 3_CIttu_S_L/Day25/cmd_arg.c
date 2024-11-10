@@ -1,14 +1,11 @@
 /*
 Program header 
 1.Objective: Write code to implement command line args
-            if argc > 1
-            Then print all arguments in reverse order.
 
 2.Revisions: Nil
 3.Date & time of revision :05/11/24
 4.Author Name: Cittu S L
 */
-
 
 #include<stdio.h>
 
@@ -21,7 +18,7 @@ void main(int argc, char *argv[])
     }
     else
     {   
-        for(lc=argc-1;lc>=0;lc--)
+        for(lc=1;lc<argc;lc++)
         {
             printf("%s \n",argv[lc]);
         }

@@ -1,4 +1,14 @@
-//circular doubly LL
+/*
+Program header 
+1.Objective: Circular doubly Linked list(circular DLL)
+            - last_node->next=head
+            - head->prev=last_node
+            write a program to create an empty circular DLL with fixed length of 10 nodes.
+            Data filed: int pID; //process ID
+2.Revisions: Nil
+3.Date & time of revision :29/10/24
+4.Author Name: Cittu S L
+*/
 
 
 #include<stdio.h>
@@ -67,15 +77,6 @@ void createCircularDLL()
         iterate=last;
     }
 }
-
-//to insert new elements(overrite) circular doubly linked list
-void insertCircularDLL()
-{
-    iterate=iterate->next;
-    printf("Enter a pID: ");
-    scanf("%d",&iterate->pID);
-}
-
 //to print circular doubly linked list
 void printCircularDLL()
 {
@@ -92,4 +93,11 @@ void printCircularDLL()
         temp=temp->next;
     }while(temp!=head);
     printf("\n");
+}
+//to insert new elements(overrite) circular doubly linked list
+void insertCircularDLL()
+{
+    iterate=iterate->next;
+    printf("Enter a pID: ");
+    scanf("%d",&iterate->pID);
 }
